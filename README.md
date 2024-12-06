@@ -87,8 +87,8 @@ Este projeto é uma API para gerenciar usuários, produtos, categorias, pedidos 
 
 1. **Clone o repositório**:
    ```sh
-   git clone https://github.com/seu-usuario/hardstop-api.git
-   cd hardstop-api
+   git clone https://github.com/danielmariae/Hardstop.API.git
+   cd Hardstop.API
    ```
 
 2. **Instale as dependências**:
@@ -98,7 +98,7 @@ Este projeto é uma API para gerenciar usuários, produtos, categorias, pedidos 
    ```
 
 3. **Configure o banco de dados**:
-   Modifique o `HardstopDbContext` conforme necessário para apontar para seu banco de dados. Use o `DataInitializer` para inicializar o banco de dados com dados de exemplo.
+   Modifique o `appsettings.json` conforme necessário para apontar para seu banco de dados. Considere o `DataInitializer` para inicializar o banco de dados com dados de exemplo.
 
 4. **Execute a aplicação**:
    ```sh
@@ -106,7 +106,7 @@ Este projeto é uma API para gerenciar usuários, produtos, categorias, pedidos 
    ```
 
 5. **Acesse a API**:
-   A API estará disponível em `http://localhost:5000` ou `https://localhost:5001`. Use ferramentas como Postman ou Insomnia para testar os endpoints da API.
+   A API estará disponível em `http://localhost:5112` ou `https://localhost:7083`. Use ferramentas como Postman ou Insomnia para testar os endpoints da API.
 
 ### Endpoints Principais
 
