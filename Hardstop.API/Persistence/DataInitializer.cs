@@ -47,6 +47,37 @@ namespace Hardstop.API.Persistence
                 }
             };
             context.Produtos.AddRange(produtos);
+
+            // Adicionando pedidos
+            var carrinho = new Carrinho
+            {
+                Items = new List<ItemCarrinho>
+                {
+                    new ItemCarrinho(1, 100.0m, produtos[0])
+                }
+            };
+
+            var pagamento = new Pagamento
+            {
+                Id = Guid.NewGuid(),
+                FormaPagamento = "Cartão de Crédito",
+                DataHoraPagamento = DateTime.UtcNow,
+                ValorPagamento = 100.0m,
+                ValidacaoPagamento = true
+            };
+
+            var pedido = new Pedido(
+                Guid.NewGuid(),
+                DateTime.UtcNow,
+                (int)StatusPedido.Pendente,
+                usuarios[0].Id,
+                carrinho,
+                pagamento
+            );
+
+            context.Pedidos.Add(pedido);
+            context.Carrinhos.Add(carrinho);
+            context.Pagamentos.Add(pagamento);
         }
     }
 }
