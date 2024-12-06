@@ -5,12 +5,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Hardstop.API.Controllers
 {
+    /// <summary>
+    /// Controller responsável por usuários e favoritos de um usuário.
+    /// </summary>
     [Route("api/usuario")]
     [ApiController]
     public class UsuariosController : ControllerBase
     {
         private readonly HardstopDbContext _context;
 
+        /// <summary>
+        /// Inicializa o controller com o contexto do banco de dados.
+        /// </summary>
+        /// <param name="context">Contexto do banco de dados.</param>
         public UsuariosController(HardstopDbContext context)
         {
             _context = context;

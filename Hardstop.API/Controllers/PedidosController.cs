@@ -5,12 +5,19 @@ using System.Linq;
 
 namespace Hardstop.API.Controllers
 {
+    /// <summary>
+    /// Controller responsável por gerenciar pedidos, carrinhos, itens de carrinho e pagamentos relativos a pedidos.
+    /// </summary>
     [Route("api/pedido")]
     [ApiController]
     public class PedidosController : ControllerBase
     {
         private readonly HardstopDbContext _context;
 
+        /// <summary>
+        /// Inicializa o controller com o contexto do banco de dados.
+        /// </summary>
+        /// <param name="context">Contexto do banco de dados.</param>
         public PedidosController(HardstopDbContext context)
         {
             _context = context;
